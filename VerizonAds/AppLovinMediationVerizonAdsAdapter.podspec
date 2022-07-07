@@ -30,6 +30,8 @@ s.source =
 s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.xcframework"
 
 s.dependency 'Yahoo-Mobile-SDK', '= 1.1.0'
+s.static_framework = true
+s.source_files = 'VerizonAdsAdapter/ALVerizonAdsMediationAdapter.{h,m}'
 s.dependency 'AppLovinSDK'
 
 s.swift_version = '5.0'
