@@ -19,10 +19,11 @@ class ALAppDelegate: UIResponder, UIApplicationDelegate
         #warning("Make sure to add your AppLovin SDK key in the Info.plist under the \"AppLovinSDKKey\" key")
         
         // Initialize the AppLovin SDK
+        ALPrivacySettings.setHasUserConsent(true)
         ALSdk.shared()!.mediationProvider = ALMediationProviderMAX
         ALSdk.shared()!.initializeSdk(completionHandler: { configuration in
             // AppLovin SDK is initialized, start loading ads now or later if ad gate is reached
-            
+            ALPrivacySettings.setHasUserConsent(true)
             // Initialize Adjust SDK
             let adjustConfig = ADJConfig(appToken: "{YourAppToken}", environment: ADJEnvironmentSandbox)
             Adjust.appDidLaunch(adjustConfig)

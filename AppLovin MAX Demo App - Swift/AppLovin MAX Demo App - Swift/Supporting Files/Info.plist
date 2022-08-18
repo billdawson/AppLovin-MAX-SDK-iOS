@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppLovinVerboseLoggingOn</key>
-	<true/>
-	<key>YahooAdsSourceAppId</key>
-	<string>0</string>
 	<key>AppLovinSdkKey</key>
 	<string>c7gXT29Zm2N-h3Sp6qf_3auATLg12_hrqqhtg0TlaJhQeB6zVgWkEklhyJlvpSm1RkKv1Jh_04X1-T5ADuX1y3</string>
+	<key>AppLovinVerboseLoggingOn</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -54,6 +52,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>YahooAdsSourceAppId</key>
+	<string>0</string>
 	<key>bdAppLovinSdkKey</key>
 	<string>c7gXT29Zm2N-h3Sp6qf_3auATLg12_hrqqhtg0TlaJhQeB6zVgWkEklhyJlvpSm1RkKv1Jh_04X1-T5ADuX1y3</string>
 	<key>kkAppLovinSdkKey</key>
