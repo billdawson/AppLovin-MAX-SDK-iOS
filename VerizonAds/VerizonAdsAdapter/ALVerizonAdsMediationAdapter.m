@@ -108,7 +108,7 @@ static NSString *const kMAAdImpressionEventId = @"adImpression";
     {
         [self log: @"Initializing SDK..."];
         
-        YASLogLevel logLevel = YES ? YASLogLevelVerbose : YASLogLevelError;
+        YASLogLevel logLevel = [parameters isTesting] ? YASLogLevelVerbose : YASLogLevelError;
         [YASAds setLogLevel: logLevel];
         
         NSString *siteID = [parameters.serverParameters al_stringForKey: @"site_id"];
@@ -350,7 +350,7 @@ static NSString *const kMAAdImpressionEventId = @"adImpression";
     NSNumber *isAgeRestrictedUser = [self privacySettingForSelector: @selector(isAgeRestrictedUser) fromParameters: parameters];
     if ( isAgeRestrictedUser.boolValue )
     {
-//        [[YASAds sharedInstance] applyCoppa];
+        [[YASAds sharedInstance] applyCoppa];
     }
     
     if ( ALSdk.versionCode >= 61100 )
