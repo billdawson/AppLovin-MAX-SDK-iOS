@@ -9,6 +9,9 @@
 import UIKit
 import Adjust
 import AppLovinSDK
+import YahooAds
+import AppTrackingTransparency
+import AdSupport
 
 class ALAppDelegate: UIResponder, UIApplicationDelegate
 {
@@ -16,6 +19,7 @@ class ALAppDelegate: UIResponder, UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
+        YASAds.logLevel = .verbose
         #warning("Make sure to add your AppLovin SDK key in the Info.plist under the \"AppLovinSDKKey\" key")
         
         // Initialize the AppLovin SDK
@@ -51,5 +55,13 @@ class ALAppDelegate: UIResponder, UIApplicationDelegate
         }
         
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        if #available(iOS 14.0, *) {
+            ATTrackingManager.requestTrackingAuthorization { _ in
+                //
+            }
+        }
     }
 }
